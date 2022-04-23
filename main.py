@@ -27,7 +27,7 @@ def massban(guild, member):
   if response.status_code in [200, 204, 201]:
     print(f"[+] Successfully Banned {member}")
   else:
-    if response.status_code == 429:
+    if response.status_code == 401:
       print("KaramveerPlayZ#1337 | Account Disabled")
     else:      
       print(f"[-] Failed To Ban Member {member}, Status Code {response.status_code}")
